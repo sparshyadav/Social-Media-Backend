@@ -16,12 +16,12 @@ const userSchema = new mongoose.Schema({
         required: true
     },
     Profile: {
-        type: mongoose.Types.Schema.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "Profile"
     },
     Posts: [
         {
-            type: mongoose.Types.Schema.ObjectId,
+            type: mongoose.Schema.Types.ObjectId,
             ref: "Post"
         }
     ]
