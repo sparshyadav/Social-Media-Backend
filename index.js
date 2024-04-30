@@ -1,6 +1,7 @@
 const express = require("express");
 const { connectDatabase } = require("./config/database");
 const userRoutes = require("./routes/User");
+const postRoutes=require("./routes/Post");
 const cloudinaryConnect = require("./config/cloudinary");
 require("dotenv").config();
 
@@ -9,10 +10,7 @@ const app = express();
 
 app.use(express.json());
 app.use("/user", userRoutes);
-app.use(fileUpload({
-    useTempFiles: true,
-    tempFileDir: '/temp/'
-}))
+app.use("/post", postRoutes);
 
 app.listen(PORT, () => {
     connectDatabase();
