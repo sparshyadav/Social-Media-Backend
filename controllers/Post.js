@@ -38,7 +38,7 @@ exports.createPost = async (req, res) => {
             { _id: userId },
             { $push: { Posts: newPost._id } },
             { new: true }
-        ).populate("Posts").exec();
+        )
 
         res.json({
             success: true,
