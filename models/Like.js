@@ -12,6 +12,10 @@ const likeSchema = new mongoose.Schema({
     createdAt: {
         type: Date,
         default: Date.now()
+    },
+    isLiked:{
+        type: Boolean, 
+        default: false
     }
 })
 
