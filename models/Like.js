@@ -13,10 +13,6 @@ const likeSchema = new mongoose.Schema({
         type: Date,
         default: Date.now()
     },
-    isLiked:{
-        type: Boolean, 
-        default: false
-    }
 })
 
 module.exports = mongoose.model("Like", likeSchema);
